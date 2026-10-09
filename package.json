@@ -1,0 +1,20 @@
+{
+  "name": "pickbits-field-invoices",
+  "version": "0.1.0",
+  "description": "Offline customers, visits, invoices and service history for a small field service business",
+  "type": "module",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": "Mark Pickering and PICKBITS LLC",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node tools/server.mjs",
+    "demo": "node tools/server.mjs --demo",
+    "test": "node --test test/*.test.mjs",
+    "leakscan": "node test/leakscan.mjs",
+    "test:consumer": "node test/consumer-install.mjs",
+    "verify:browser": "node tools/verify-browser.mjs",
+    "build:icons": "node tools/build-icons.mjs",
+    "preflight": "npm test && npm run leakscan && npm run test:consumer && npm run verify:browser"
+  }
+}

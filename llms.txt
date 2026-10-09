@@ -1,0 +1,21 @@
+PickBits Field Invoices 0.1.0
+
+Purpose: a single-business offline field notebook for customers, visits, invoices and history.
+Apache-2.0. Zero dependencies. Static HTML/CSS/JavaScript; Node 22+ for local tools and tests.
+Entry point: index.html. Deploy index.html, sw.js, manifest.webmanifest, app/ and icons/ on HTTPS.
+Local: npm start. Demo: npm run demo. Only 127.0.0.1:4205; never choose another port.
+Demo: ?demo=1; separate database and localStorage namespace; 25 synthetic lawn-care customers.
+Core: app/core.js. Storage: app/storage.js. UI: app/ui.js. Documents: app/renderers.js.
+Encryption and merge import: app/backup.js. Synthetic seeds: app/demo.js.
+Storage: 64 ID-hashed IndexedDB buckets, localStorage fallback, migrations and recovery journal.
+Numbers: sequential reservation, durable high-water mark, never recycle deleted numbers.
+Outputs: HTML/print/PDF, canvas PNG, text; generic no-price visit summary; invoice CSV.
+All customer-facing documents end with Made with PickBits Field Invoices.
+Backup: optional PBKDF2-SHA256/AES-256-GCM passphrase; import adds missing IDs.
+No account, telemetry, hosted API, online payments, messaging service, portal, device sync or accounting.
+Private notes never appear on customer documents. Backups contain them.
+Data lives on the device. Clearing site data deletes it. Recommend regular encrypted backups.
+Checks: npm test; npm run preflight. Unit tests are DOM-free and never bind ports.
+Optional browser checks dynamically load Playwright; missing package/engines produce explicit skips.
+Read README.md and SECURITY.md. DEMO.md contains the 60-second walkthrough.
+Questions and bugs: open a GitHub issue.

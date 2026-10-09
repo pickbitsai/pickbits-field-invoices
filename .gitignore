@@ -1,0 +1,12 @@
+node_modules/
+.test-tmp/
+dist/
+build/
+test-output/
+demo-data/
+outbox/
+outboxes/
+.env*
+*.local.*
+local-config.*
+*.log
